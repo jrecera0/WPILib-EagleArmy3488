@@ -1,0 +1,2 @@
+language = "java10"
+run = "javac edu/wpi/first/ds/DriverStation.java; java edu/wpi/first/ds/DriverStation"
