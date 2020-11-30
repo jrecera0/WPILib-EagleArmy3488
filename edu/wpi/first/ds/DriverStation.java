@@ -17,11 +17,11 @@ public class DriverStation {
         while(robotIsRunning) {
             // Initial Run Message
             if(firstRun) {
-                System.out.println("Welcome to the mock FRC Driver Station!");
+                System.out.println("\nWelcome to the mock FRC Driver Station!");
                 System.out.println("Directions to run: Input the number of");
                 System.out.println("the mode you want to run in the console");
-                System.out.println("prompt, and afterwards you code will be");
-                System.out.println("executed. Happy coding! - James \n");
+                System.out.println("prompt, and afterwards your code will");
+                System.out.println("be executed. Happy coding! - James \n");
                 firstRun = false;
             }
 
