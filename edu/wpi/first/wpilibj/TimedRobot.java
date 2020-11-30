@@ -1,8 +1,11 @@
 package edu.wpi.first.wpilibj;
 
+// INFO: robotInit() and robotPeriodic default method
+// messages have been commented out to avoid confusion.
+
 public class TimedRobot {
     public void robotInit() {
-        System.out.println("Default robotInit() method... Override me!");
+        //System.out.println("Default robotInit() method... Override me!");
     }
     
     public void disabledInit() {
@@ -22,7 +25,7 @@ public class TimedRobot {
     }
 
     public void robotPeriodic() {
-        System.out.println("Default robotPeriodic() method... Override me!");
+        //System.out.println("Default robotPeriodic() method... Override me!");
     }
 
     public void disabledPeriodic() {
