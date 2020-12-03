@@ -4,9 +4,20 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.PWMVictorSPX;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.XboxController;
 
 public class Robot extends TimedRobot {
+    @Override
+    public void robotInit() {
+
+    }
+
+    @Override
+    public void robotPeriodic() {
+
+    }
+
     @Override
     public void teleopInit() {
 		
@@ -14,6 +25,16 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopPeriodic() {
+
+    }
+
+    @Override
+    public void autonomousInit() {
+
+    }
+
+    @Override
+    public void autonomousPeriodic() {
 
     }
 }
