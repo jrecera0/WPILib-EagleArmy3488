@@ -9,7 +9,7 @@ public class DriverStation {
 
     public static boolean controllerIsLocked = false;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         boolean firstRun = true;
         int mode = 0;
         Scanner consoleInput = new Scanner(System.in);
@@ -52,7 +52,7 @@ public class DriverStation {
         consoleInput.close();
     }
 
-    private static void run(int mode) {
+    private static void run(int mode) throws InterruptedException{
         Robot robot = new Robot();
         boolean loopStatus = true;
         switch(mode) {
