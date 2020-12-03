@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.XboxController;
 public class Robot extends TimedRobot {
     @Override
     public void robotInit() {
-
+        
     }
 
     @Override
@@ -35,6 +35,6 @@ public class Robot extends TimedRobot {
 
     @Override
     public void autonomousPeriodic() throws InterruptedException {
-        Thread.sleep(1000);
+
     }
 }
