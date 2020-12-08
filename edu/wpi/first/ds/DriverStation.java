@@ -109,7 +109,7 @@ public class DriverStation {
     }
 
     private static boolean runningPeriodic() throws InterruptedException {
-        Thread.sleep(20);
+        Thread.sleep(200);
         return true;
     }
 }
