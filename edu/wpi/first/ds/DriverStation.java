@@ -52,7 +52,7 @@ public class DriverStation {
         consoleInput.close();
     }
 
-    private static void run(int mode) throws InterruptedException{
+    private static void run(int mode) throws InterruptedException {
         Robot robot = new Robot();
         boolean loopStatus = true;
         switch(mode) {
