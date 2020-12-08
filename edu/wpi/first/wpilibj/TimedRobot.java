@@ -24,7 +24,7 @@ public class TimedRobot {
         System.out.println("Default testInit() method... Override me!");
     }
 
-    public void robotPeriodic() throws InterruptedException {
+    public void robotPeriodic() {
         System.out.println("Default robotPeriodic() method... Override me!");
     }
 
@@ -32,11 +32,11 @@ public class TimedRobot {
         System.out.println("Default disabledPeriodic() method... Override me!");
     }
 
-    public void autonomousPeriodic() throws InterruptedException {
+    public void autonomousPeriodic() {
         System.out.println("Default autonomousPeriodic() method... Override me!");
     }
 
-    public void teleopPeriodic() throws InterruptedException {
+    public void teleopPeriodic() {
         System.out.println("Default teleopPeriodic() method... Override me!");
     }
 

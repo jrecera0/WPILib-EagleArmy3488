@@ -4,9 +4,11 @@ import java.util.Scanner;
 import src.main.java.frc.robot.Robot;
 
 public class DriverStation {
-    private static boolean robotIsRunning = true;
-    private static boolean takingUserInput = true;
+    // Internal variables for functionality
+    static boolean robotIsRunning = true;
+    static boolean takingUserInput = true;
 
+    // Outside accessible variable
     public static boolean controllerIsLocked = false;
 
     public static void main(String[] args) throws InterruptedException {
@@ -54,7 +56,6 @@ public class DriverStation {
 
     private static void run(int mode) throws InterruptedException {
         Robot robot = new Robot();
-        boolean loopStatus = true;
         switch(mode) {
             case 0:
                 robotIsRunning = false;
@@ -63,8 +64,7 @@ public class DriverStation {
                 controllerIsLocked = true;
                 robot.robotInit();
                 robot.autonomousInit();
-                while(runningPeriodic(loopStatus)) {
-                    loopStatus = false;
+                while(runningPeriodic()) {
                     robot.robotPeriodic();
                     robot.autonomousPeriodic();
                 }
@@ -72,8 +72,7 @@ public class DriverStation {
             case 2:
                 robot.robotInit();
                 robot.teleopInit();
-                while(runningPeriodic(loopStatus)) {
-                    loopStatus = false;
+                while(runningPeriodic()) {
                     robot.robotPeriodic();
                     robot.teleopPeriodic();
                 }
@@ -81,29 +80,26 @@ public class DriverStation {
             case 3:
                 robot.robotInit();
                 robot.testInit();
-                while(runningPeriodic(loopStatus)) {
-                    loopStatus = false;
+                while(runningPeriodic()) {
                     robot.robotPeriodic();
                     robot.testPeriodic();
                 }
                 break;
             case 4:
-                System.out.println("WARNING! This mode can be hard to understand so use at your own discretion.");
-                robot.robotInit();
-                robot.autonomousInit();
-                controllerIsLocked = true;
-                while(runningPeriodic(loopStatus)) {
-                    loopStatus = false;
-                    robot.robotPeriodic();
-                    robot.autonomousPeriodic();
-                }
-                controllerIsLocked = false;
-                loopStatus = true;
-                robot.teleopInit();
-                while(runningPeriodic(loopStatus)) {
-                    robot.teleopPeriodic();
-                    loopStatus = false;
-                }
+                System.out.println("Disabled for week 5");
+                // System.out.println("WARNING! This mode can be hard to understand so use at your own discretion.");
+                // robot.robotInit();
+                // robot.autonomousInit();
+                // controllerIsLocked = true;
+                // while(runningPeriodic()) {
+                //     robot.robotPeriodic();
+                //     robot.autonomousPeriodic();
+                // }
+                // controllerIsLocked = false;
+                // robot.teleopInit();
+                // while(runningPeriodic()) {
+                //     robot.teleopPeriodic();
+                // }
                 break;
             default:
                 System.out.println("Error! Invalid mode.");
@@ -112,20 +108,8 @@ public class DriverStation {
         controllerIsLocked = false;
     }
 
-    private static boolean runningPeriodic(boolean firstRun) {
-        Scanner consoleInput = new Scanner(System.in);
-        if(firstRun) {
-            return true;
-        }
-        else {
-            System.out.println("==============END CODE==============");
-            System.out.print("End of periodic loop. Keep running? (y/n): ");
-            String in = consoleInput.next().toLowerCase();
-            if(!in.equals("y")) {
-                return false;
-            }
-            System.out.println("=============START CODE=============");
-            return true;
-        }
+    private static boolean runningPeriodic() throws InterruptedException {
+        Thread.sleep(20);
+        return true;
     }
 }

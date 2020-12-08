@@ -15,7 +15,7 @@ public class DifferentialDrive {
     }
 
     public void arcadeDrive(double xSpeed, double zRotation) {
-        System.out.println("Robot is moving fwd/back with a speed of: " + xSpeed);
+        System.out.println("Robot is moving fwd/back with a speed of:     " + xSpeed);
         System.out.println("Robot is rotating left/right with a speed of: " + zRotation);
     }
 

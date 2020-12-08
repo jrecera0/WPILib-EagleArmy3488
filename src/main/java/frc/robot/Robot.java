@@ -14,7 +14,7 @@ public class Robot extends TimedRobot {
     }
 
     @Override
-    public void robotPeriodic() throws InterruptedException {
+    public void robotPeriodic() {
 
     }
 
@@ -24,7 +24,7 @@ public class Robot extends TimedRobot {
     }
 
     @Override
-    public void teleopPeriodic() throws InterruptedException {
+    public void teleopPeriodic() {
 
     }
 
@@ -34,7 +34,7 @@ public class Robot extends TimedRobot {
     }
 
     @Override
-    public void autonomousPeriodic() throws InterruptedException {
+    public void autonomousPeriodic() {
 
     }
 }
